@@ -1,4 +1,4 @@
-import { Instagram, Phone, MapPin } from 'lucide-react';
+import { Camera, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
           <p><Phone size={15} className="inline-icon" />+61 2 9707 4320</p>
           <p><MapPin size={15} className="inline-icon" />Greenacre, NSW</p>
           <div className="social-row">
-            <a href="#" aria-label="Instagram" className="social-btn"><Instagram size={17} /></a>
+            <a href="#" aria-label="Instagram" className="social-btn"><Camera size={17} /></a>
           </div>
         </div>
       </div>
