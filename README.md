@@ -1,38 +1,39 @@
-La Roche Restaurant Website (React + Node)
+La Roche Restaurant (Frontend Only)
 
-A full-stack restaurant website inspired by the common BBQ-Bites structure:
-- client/ (React + Vite frontend)
-- server/ (Node + Express API)
+This repository is a frontend-only React landing page, structured to align with the BBQ-Bites layout for Azure Static Web Apps hosting.
 
-Business profile used for content (best-effort web research):
-- Name: La Roche / La Rouche Lebanese Restaurant
-- Area: Sydney, NSW (Greenacre/Guildford references)
-- Style: Lebanese charcoal grill, family dining
+Tech
+- React + Vite
+- React Router
+- Framer Motion
+- Lucide Icons
 
-Features
-- Hero section, menu cards, contact/location, reservation form
-- API endpoints:
-  - GET /api/health
-  - GET /api/business
-  - GET /api/menu
-  - POST /api/reservations
+Structure (BBQ-Bites aligned)
+- src/
+  - components/bbq/
+  - pages/
+  - App.jsx
+  - main.jsx
+  - index.css
+- public/
+- index.html
+- vite.config.js
+- package.json
 
-Run locally
-1) Server
-   cd server
-   npm install
-   npm run dev
+No backend
+- No API routes
+- No Node/Express server
+- Fully static landing page
 
-2) Client (new terminal)
-   cd client
-   cp .env.example .env
-   npm install
-   npm run dev
+Local dev
+1) npm install
+2) npm run dev
 
-Then open http://localhost:5173
+Production build
+- npm run build
+- output: dist/
 
-Notes
-- Reservation endpoint currently returns confirmation JSON (no database/email yet).
-- You can replace menu items and branding assets easily in:
-  - server/index.js (business/menu data)
-  - client/src/App.jsx + client/src/App.css
+Azure Static Web Apps
+- app_location: /
+- output_location: dist
+- Node build command: npm run build
