@@ -1,3 +1,5 @@
+import { Instagram, Phone, MapPin } from 'lucide-react';
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -14,9 +16,12 @@ export default function Footer() {
           <a href="#location">Find Us</a>
         </div>
         <div>
-          <h4>Contact</h4>
-          <p>+61 2 9707 4320</p>
-          <p>Greenacre, NSW</p>
+          <h4>Connect</h4>
+          <p><Phone size={15} className="inline-icon" />+61 2 9707 4320</p>
+          <p><MapPin size={15} className="inline-icon" />Greenacre, NSW</p>
+          <div className="social-row">
+            <a href="#" aria-label="Instagram" className="social-btn"><Instagram size={17} /></a>
+          </div>
         </div>
       </div>
       <p className="copyright">© {new Date().getFullYear()} La Roche Restaurant</p>
