@@ -7,16 +7,19 @@ const dishes = [
 
 export default function MenuSection() {
   return (
-    <section id="menu" className="section container">
-      <h2>Signature Menu</h2>
-      <div className="grid">
-        {dishes.map(([name, price, desc]) => (
-          <article key={name} className="card">
-            <h3>{name}</h3>
-            <p>{desc}</p>
-            <strong>{price}</strong>
-          </article>
-        ))}
+    <section id="menu" className="section section-dark">
+      <div className="container">
+        <p className="section-kicker">OUR MENU</p>
+        <h2>Signature Menu</h2>
+        <div className="grid">
+          {dishes.map(([name, price, desc]) => (
+            <article key={name} className="card hover-lift">
+              <h3>{name}</h3>
+              <p>{desc}</p>
+              <strong>{price}</strong>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

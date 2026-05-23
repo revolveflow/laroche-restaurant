@@ -1,11 +1,20 @@
 export default function HeroSection() {
   return (
     <section id="home" className="hero">
+      <div className="hero-overlay" />
+      <div className="embers" aria-hidden="true">
+        {[...Array(8)].map((_, i) => <span key={i} style={{ animationDelay: `${i * 0.4}s` }} />)}
+      </div>
       <div className="container hero-content">
         <p className="kicker">Authentic Lebanese charcoal flavours</p>
-        <h1>La Roche Restaurant</h1>
+        <h1>
+          LA ROCHE <span>RESTAURANT</span>
+        </h1>
         <p>Family dining, fresh grills, shawarma and mezze — crafted for Sydney nights.</p>
-        <a className="order-btn" href="#menu">Explore Menu</a>
+        <div className="hero-cta-row">
+          <a className="order-btn" href="#menu">VIEW MENU</a>
+          <a className="ghost-btn" href="#location">FIND US</a>
+        </div>
       </div>
     </section>
   );
